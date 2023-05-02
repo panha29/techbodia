@@ -5,6 +5,7 @@ const loadCountryAPI = () =>{
     fetch('https://restcountries.com/v3.1/all')
     .then(res => res.json())
     .then(data => displayCountries(data))
+
 }
 
 // displaying all countries
@@ -20,18 +21,20 @@ const displayCountries = countries =>{
 
 // get data and set it to html
 const getCountry = (country) =>{
-    console.log(country.name.nativeName.khm);
+    var nname = [country.name.nativeName];
+    nname[1].pop();
+    console.log(nname);
 
     return `
     <tr id="">
-     <td>${country.name.official}</td>
-     <td><img src="${country.flags.png}" style="width:75px"></td>
-     <td>${country.cca2}</td>
-     <td>${country.cca3}</td>
-     <td>${country.name.nativeName}</td>
-     <td>${country.altSpellings}</td>
-     <td>${country.idd.root}</td>
- </tr>
+        <td>${country.name.official}</td>
+        <td><img src="${country.flags.png}" style="width:75px"></td>
+        <td>${country.cca2}</td>
+        <td>${country.cca3}</td>
+        <td>${nname}</td>
+        <td>${country.altSpellings}</td>
+        <td>${country.idd.root}</td>
+    </tr>
     `
 
 }
