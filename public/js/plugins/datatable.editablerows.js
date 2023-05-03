@@ -44,7 +44,7 @@ class EditableRows {
             order: [], // Clearing default order
             sDom: '<"row"<"col-sm-12"<"table-container"t>r>><"row"<"col-12"p>>', // Hiding all other dom elements except table and pagination
             pageLength: 25,
-            columns: [{ data: 'Name' }, { data: 'Flag' }, { data: 'CCa2' }, { data: 'CCa3' }, { data: 'Native Name' }, { data: 'Alternative Name' }, { data: 'CCC' }],
+            columns: [{ data: 'No' }, { data: 'Name' }, { data: 'Flag' }, { data: 'CCa2' }, { data: 'CCa3' }, { data: 'Native Name' }, { data: 'Alternative Name' }, { data: 'CCC' }],
             language: {
                 paginate: {
                     previous: '<i class="cs-chevron-left"></i>',
@@ -54,10 +54,16 @@ class EditableRows {
             columnDefs: [
                 // Adding Name content as an anchor with a target #
                 {
-                    targets: 0,
+                    targets: 1,
                     render: function(data, type, row, meta) {
+                        return '<a class="list-item-heading body" href="123">' + data + '</a>';
+                        // return '<a class="list-item-heading body" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">' + data + '</a>';
+                    },
+
+                    targets: 5,
+                    render: function(string, type, row, meta) {
                         // return '<a class="list-item-heading body" href="#">' + data + '</a>';
-                        return '<a class="list-item-heading body" data-bs-toggle="modal" data-bs-target="#exampleModal">' + data + '</a>';
+                        return '<a class="list-item-heading body" data-bs-toggle="modal" data-bs-target="#exampleModal">' + string + '</a>';
                     },
                 },
                 // // Adding Tag content as a span with a badge class

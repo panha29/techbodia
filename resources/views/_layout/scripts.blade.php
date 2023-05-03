@@ -21,3 +21,11 @@
 <script src="/js/scripts.js"></script>
 <!-- Page Specific Scripts End -->
 
+
+<script>
+   $(document).ready( function () {
+  var table = $('#countrytable').DataTable( {
+    pageLength : 25,
+  } )
+} );
+  </script>

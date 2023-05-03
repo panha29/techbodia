@@ -29,6 +29,7 @@
 <!-- Vendor Styles Start -->
 <link rel="stylesheet" href="/css/vendor/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/vendor/OverlayScrollbars.min.css"/>
+
 @yield('css')
 <!-- Vendor Styles End -->
 <!-- Template Base Styles Start -->
@@ -36,3 +37,4 @@
 <link rel="stylesheet" href="/css/main.css"/>
 <!-- Template Base Styles End -->
 <script src="/js/base/loader.js"></script>
+

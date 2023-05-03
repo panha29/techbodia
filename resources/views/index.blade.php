@@ -1,29 +1,35 @@
 @php
     $html_tag_data = [];
-    $title = 'Editable Rows Datatables';
+    $title = 'Rest Countries API';
     $description= 'A table enhancing plug-in for the jQuery Javascript library, adding sorting, paging and filtering abilities to plain HTML tables with minimal effort.';
-    $breadcrumbs = ["/"=>"Home","/Interface"=>"Interface","/Interface/Plugins"=>"Plugins","/Interface/Plugins/Datatables"=>"Datatables"]
+    $breadcrumbs = ["/"=>"Home"]
 @endphp
 @extends('layout',['html_tag_data'=>$html_tag_data, 'title'=>$title, 'description'=>$description])
 
 @section('css')
     <link rel="stylesheet" href="/css/vendor/datatables.min.css"/>
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"> --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 @endsection
 
 @section('js_vendor')
-<script src="/js/vendor/datatables.min.js"></script>
+
+    <script src="/js/vendor/datatables.min.js"></script>
     <script src="/js/vendor/bootstrap-submenu.js"></script>
     <script src="/js/vendor/mousetrap.min.js"></script>
 @endsection
 
 @section('js_page')
-
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 <script src="/js/cs/datatable.extend.js"></script>
 <script src="/js/plugins/datatable.editablerows.js"></script>
 @endsection
-@include('countries_api')
 
 @section('content')
+@include('countries_api')
+
     <!-- you also can do it as js file but i choose to do its as blade file-->
     <div class="container">
         <div class="row">
@@ -51,43 +57,30 @@
                         </div>
                     </div>
                     <div class="data-table-responsive-wrapper">
-                        <table id="datatableRows" class="data-table nowrap hover">
+                        {{-- <table id="datatableRows" class="data-table nowrap hover"> --}}
+                            <table id="countrytable" class="table table-striped" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">Name</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">Flag</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">CCa2</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">CCa3</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">Native Name</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">Alternative Name</th>
-                                    <th class="text-muted text-small text-uppercase" class="col-2">CCC</th>
+                                    <th></th>
+                                    <th class="" class="col-4">Name</th>
+                                    <th class="" class="col-2">Flag</th>
+                                    <th class="" class="col-2">CCa2</th>
+                                    <th class="" class="col-2">CCa3</th>
+                                    <th class="" class="col-2">Native Name</th>
+                                    <th class="" class="col-2">Alternative Name</th>
+                                    <th class="" class="col-2">CCC</th>
                                 </tr>
                             </thead>
                             <tbody class="countries filter_ctname" id="countries">
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
                             </tbody>
+
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script>
         function filter_name() {
@@ -116,4 +109,5 @@
             }
         }
     </script>
+
 @endsection
