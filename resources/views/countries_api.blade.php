@@ -41,8 +41,6 @@ const getCountry = (country) =>{
     <td>${country.altSpellings}</td>
     <td>${country.idd.root}</td>
 </tr>
-
-
     `
 
 }

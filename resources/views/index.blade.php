@@ -62,13 +62,13 @@
                             <thead>
                                 <tr>
                                     <th></th>
-                                    <th class="" class="col-4">Name</th>
-                                    <th class="" class="col-2">Flag</th>
-                                    <th class="" class="col-2">CCa2</th>
-                                    <th class="" class="col-2">CCa3</th>
-                                    <th class="" class="col-2">Native Name</th>
-                                    <th class="" class="col-2">Alternative Name</th>
-                                    <th class="" class="col-2">CCC</th>
+                                    <th class="col-4">Name</th>
+                                    <th class="col-2">Flag</th>
+                                    <th class="col-2">CCa2</th>
+                                    <th class="col-2">CCa3</th>
+                                    <th class="col-2">Native Name</th>
+                                    <th class="col-2">Alternative Name</th>
+                                    <th class="col-2">CCC</th>
                                 </tr>
                             </thead>
                             <tbody class="countries filter_ctname" id="countries">
