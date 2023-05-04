@@ -20,7 +20,7 @@
 @endsection
 
 @section('js_page')
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 <script src="/js/cs/datatable.extend.js"></script>
@@ -73,15 +73,54 @@
                             </thead>
                             <tbody class="countries filter_ctname" id="countries">
                             </tbody>
+                            <!-- Modal -->
+                            <div class="modal fade muid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="country_modal">
 
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+// var n=0;
+// $('.muid').each(function(){
+//     n++;
+//     var newID='uid'+n;
+//     $(this).attr('id',newID);
+//     $(this).val(n);
+//     console.log(n)
+// });
+// var n=0;
+// $('.muid').each(function(){
+//    for (n=1; n<=10; n++) {
+//     var newID='uid'+n;
+//     $(this).attr('id',newID);
+//     $(this).val(n);
+//     console.log(n);
 
+// }
+// });
 
+</script>
     <script>
         function filter_name() {
             var input, filter, table, tr, td, i, tbody;
