@@ -26,6 +26,7 @@
    $(document).ready( function () {
   var table = $('#countrytable').DataTable( {
     pageLength : 25,
+    searching: false,
   } )
 } );
   </script>

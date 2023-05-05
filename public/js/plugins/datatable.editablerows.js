@@ -47,7 +47,7 @@ class EditableRows {
             columns: [{ data: 'No' }, { data: 'Name' }, { data: 'Flag' }, { data: 'CCa2' }, { data: 'CCa3' }, { data: 'Native Name' }, { data: 'Alternative Name' }, { data: 'CCC' }],
             language: {
                 paginate: {
-                    previous: '<i class="cs-chevron-left"></i>',
+                    Back: '<i class="cs-chevron-left"></i>',
                     next: '<i class="cs-chevron-right"></i>',
                 },
             },
@@ -56,14 +56,14 @@ class EditableRows {
                 {
                     targets: 1,
                     render: function(data, type, row, meta) {
-                        return '<a class="list-item-heading body" href="123">' + data + '</a>';
+                        return '<a class="list-item-heading body">' + data + '</a>';
                         // return '<a class="list-item-heading body" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">' + data + '</a>';
                     },
 
-                    targets: 5,
-                    render: function(string, type, row, meta) {
+                    targets: 6,
+                    render: function(data, type, row, meta) {
                         // return '<a class="list-item-heading body" href="#">' + data + '</a>';
-                        return '<a class="list-item-heading body" data-bs-toggle="modal" data-bs-target="#exampleModal">' + string + '</a>';
+                        return '<td class="col-2">' + data + '</td>';
                     },
                 },
                 // // Adding Tag content as a span with a badge class

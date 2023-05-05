@@ -27,8 +27,6 @@
 @endsection
 
 @section('content')
-@include('countries_api_js')
-{{-- @include('modal') --}}
     <div class="container">
         <div class="row">
             <div class="col">
@@ -70,7 +68,11 @@
                                 </tr>
                             </thead>
                             <tbody class="countries filter_ctname" id="countries">
-
+                                @foreach ($jsonData as $item)
+                                    <tr>
+                                        <td>{{$item->cca2}}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
 
                         </table>
@@ -79,9 +81,7 @@
             </div>
         </div>
     </div>
-<script>
-    console.log({{$jsonData['name.official']}})
-</script>
+
 
     <script>
         function filter_name() {
