@@ -79,9 +79,7 @@
             </div>
         </div>
     </div>
-<script>
-    console.log({{$jsonData['name.official']}})
-</script>
+
 
     <script>
         function filter_name() {

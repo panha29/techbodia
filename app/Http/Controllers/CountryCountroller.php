@@ -8,13 +8,5 @@ use PHPUnit\Util\Json;
 
 class CountryCountroller extends Controller
 {
-    public function index(){
-        $response = Http::get('https://restcountries.com/v2/all');
-        // $response = Http::get('https://restcountries.com/v3.1/all');
 
-        $jsonData = $response->json();
-
-        // dd($jsonData);
-return view('testing',compact('jsonData'));
-    }
 }

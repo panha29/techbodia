@@ -24,11 +24,10 @@ Route::redirect('/', '/Dashboards/Index');
 |--------------------------------------------------------------------------
 |
 */
-// Route::prefix('Dashboards')->group(function () {
-//     Route::view('Index', 'index');
+Route::prefix('Dashboards')->group(function () {
+    Route::view('Index', 'index');
 
-// });
+});
 
-Route::get('Dashboards/Index',[CountryCountroller::class,'index']);
 
 
